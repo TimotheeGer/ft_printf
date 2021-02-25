@@ -6,7 +6,7 @@
 /*   By: tigerber <tigerber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/12 11:55:06 by tigerber          #+#    #+#             */
-/*   Updated: 2021/02/25 15:37:39 by tigerber         ###   ########.fr       */
+/*   Updated: 2021/02/25 15:54:32 by tigerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ typedef struct	pf
 }				varpf;
 
 int		    checktype(char c);
-int		ft_strlen(const char *s);
+int			ft_strlen(const char *s);
 int			countnum_exa(long n);
 int			countnum(long n);
 void		ft_putchar(char c);
