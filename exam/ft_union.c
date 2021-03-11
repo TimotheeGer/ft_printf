@@ -6,7 +6,7 @@
 /*   By: tigerber <tigerber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/09 15:36:35 by tigerber          #+#    #+#             */
-/*   Updated: 2021/03/09 15:40:35 by tigerber         ###   ########.fr       */
+/*   Updated: 2021/03/11 11:26:07 by tigerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,45 @@
 // $>./union "rien" | cat -e
 // $
 // $>
+
+#include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	write (1, &c, 1);
+	return ;
+}
+
+void	ft_union(char *str1, char *str2)
+{
+	int tab[127] = {0};
+	int i = 0;
+		
+	while (str1[i])
+	{
+		if (tab[(int)str1[i]] == 0)
+		{
+			tab[(int)str1[i]] = 1;
+			ft_putchar(str1[i]);
+		}
+		i++;
+	}
+	i = 0;
+	while (str2[i])
+	{
+		if (tab[(int)str2[i]] == 0)
+		{
+			tab[(int)str2[i]] = 1;
+			ft_putchar(str2[i]);
+		}
+		i++;
+	}
+}
+
+int		main(int ac, char **av)
+{
+	if (ac == 3)
+		ft_union(av[1], av[2]);
+	ft_putchar('\n');
+	return(0);
+}
